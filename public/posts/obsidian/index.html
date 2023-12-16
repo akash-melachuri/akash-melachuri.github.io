@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Obsidian - A Pet Project Raytracer implemented in Rust and Vulkan</title>
+    <meta name="description" content="A place to showcase things I&#39;ve done">
+    <meta name="keywords" content='blog, gokarna, hugo'>
+
+    <meta property="og:url" content="http://akash-melachuri.github.io/posts/obsidian/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Obsidian - A Pet Project Raytracer implemented in Rust and Vulkan">
+    <meta property="og:description" content="A place to showcase things I&#39;ve done">
+    <meta property="og:image" content="http://akash-melachuri.github.io/images/profile.jpeg">
+    <meta property="og:image:secure_url" content="http://akash-melachuri.github.io/images/profile.jpeg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Obsidian - A Pet Project Raytracer implemented in Rust and Vulkan">
+    <meta name="twitter:description" content="A place to showcase things I&#39;ve done">
+    <meta property="twitter:domain" content="http://akash-melachuri.github.io/posts/obsidian/">
+    <meta property="twitter:url" content="http://akash-melachuri.github.io/posts/obsidian/">
+    <meta name="twitter:image" content="http://akash-melachuri.github.io/images/profile.jpeg">
+
+    
+    <link rel="canonical" href="http://akash-melachuri.github.io/posts/obsidian/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.edd985581bf860dfb4507e5885197f1680160c7fe19f23b31e183126d99dd596.js" integrity="sha256-7dmFWBv4YN&#43;0UH5YhRl/FoAWDH/hnyOzHhgxJtmd1ZY="></script>
+
+    
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://akash-melachuri.github.io/">
+                <img src='/images/profile.jpeg' alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://akash-melachuri.github.io/">Akash Melachuri</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://akash-melachuri.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/akash-melachuri"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://akash-melachuri.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/akash-melachuri"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Obsidian - A Pet Project Raytracer implemented in Rust and Vulkan</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">December 16, 2023
+        
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="obsidian">Obsidian</h3>
+<p>Whitted Raytracer written in Rust using the Vulkan compute API</p>
+<p>Look at the <a href="https://github.com/akash-melachuri/obsidian">source</a>.</p>
+<p><img src="/images/obsidian/image3.png" alt="image3"></p>
+<p>This is a project I worked on to learn more about raytracing techniques, Rust,
+and Vulkan.</p>
+<h2 id="some-notes">Some notes</h2>
+<p><strong>Disclaimer</strong>: The below notes are several years old and are likely (definitely) out of date.</p>
+<p>This raytracer only renders spheres, as I&rsquo;ve only implemented the ray-sphere
+intersection. Some potential future features could be ray-triangle
+intersections and handling refraction. However due to the immaturity of Rust
+and the available Vulkan bindings, it was pretty difficult to actually use
+Vulkan&rsquo;s compute API. For this reason, if I were to implement a more
+fully-featured whitted raytracer, I&rsquo;d likely just use C++ for the more
+established ecosystem of libraries and tools. Rust is a great programming
+language, but it still seems to be a little rough around the edges in certain
+niche areas.</p>
+<h2 id="reflections">Reflections</h2>
+<p><img src="/images/obsidian/image.png" alt="image"></p>
+<h2 id="materials">Materials</h2>
+<p><img src="/images/obsidian/image2.png" alt="image2"></p>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="topFunction()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

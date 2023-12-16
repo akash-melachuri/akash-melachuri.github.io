@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Akash Melachuri</title>
+    <link>http://akash-melachuri.github.io/</link>
+    <description>Recent content on Akash Melachuri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Dec 2023 13:42:33 -0500</lastBuildDate><atom:link href="http://akash-melachuri.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Obsidian - A Pet Project Raytracer implemented in Rust and Vulkan</title>
+      <link>http://akash-melachuri.github.io/posts/obsidian/</link>
+      <pubDate>Sat, 16 Dec 2023 13:42:33 -0500</pubDate>
+      
+      <guid>http://akash-melachuri.github.io/posts/obsidian/</guid>
+      <description>Obsidian Whitted Raytracer written in Rust using the Vulkan compute API
+Look at the source.
+This is a project I worked on to learn more about raytracing techniques, Rust, and Vulkan.
+Some notes Disclaimer: The below notes are several years old and are likely (definitely) out of date.
+This raytracer only renders spheres, as I&amp;rsquo;ve only implemented the ray-sphere intersection. Some potential future features could be ray-triangle intersections and handling refraction.</description>
+    </item>
+    
+  </channel>
+</rss>
