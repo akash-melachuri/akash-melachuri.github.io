@@ -1,6 +1,6 @@
 ---
 title: "Obsidian - A Pet Project Raytracer implemented in Rust and Vulkan"
-date: 2023-12-16T13:42:33-05:00
+date: 2021-04-21
 draft: false
 type: "post"
 ---
