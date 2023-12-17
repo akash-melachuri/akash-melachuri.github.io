@@ -31,6 +31,8 @@ enableRobotsTXT = true
       {name = "email", url = "mailto:akashmelachuri@outlook.com"},
   ]
 
+  showPostsOnHomePage = "popular"
+
 [menu]
   [[menu.main]]
     # Unique identifier for a menu item
