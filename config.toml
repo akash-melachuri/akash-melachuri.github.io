@@ -10,7 +10,7 @@ enableRobotsTXT = true
   avatarURL = "/images/profile.jpeg"
 
   # Description to display on homepage
-  description = "A place to showcase things I've done"
+  description = "I am a Computer Science student at Purdue University"
 
   # Accent color is displayed when you hover over <a> tags
   accentColor = "#FF4D4D"
